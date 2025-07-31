@@ -8,7 +8,7 @@ public final class HomePage extends BrowserUtility {
 
 	public HomePage(WebDriver driver) {
 		super(driver);  // to call a parent class constructor from the child contructor
-		goToWebsite("https://www.eyeontask.com/login");
+		goToWebsite("");
 	}
 
 }
