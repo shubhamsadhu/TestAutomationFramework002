@@ -1,0 +1,5 @@
+Notes
+1. child class call the parent class constructor using super keyword
+2. parent class should be mark as abstract
+3. doesn't create object of abstract class
+4. In page object design pattern void return type could not be use.
