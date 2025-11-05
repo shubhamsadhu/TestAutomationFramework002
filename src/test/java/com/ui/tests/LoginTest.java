@@ -6,13 +6,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import com.ui.pages.HomePage;
+import com.ui.pages.LoginPage;
 import com.utility.BrowserUtility;
 
 public class LoginTest {
 
 	public static void main(String[] args) {
 		WebDriver wd = new ChromeDriver();
-		HomePage homePage = new HomePage(wd);
+		
 		
 		
 
