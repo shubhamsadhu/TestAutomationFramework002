@@ -47,4 +47,8 @@ public abstract class BrowserUtility {
 		WebElement Element = driver.findElement(locator);
 		Element.sendKeys(text); 
 	}
+
+	public void sendtext(){
+	
+	}
 }
