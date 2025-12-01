@@ -17,7 +17,6 @@ public abstract class BrowserUtility {
 	private WebDriver driver;
 	
 	public BrowserUtility(WebDriver driver) {
-		super();
 		this.driver=driver;  //to initiaze the instance variable driver!
 	}
 	
