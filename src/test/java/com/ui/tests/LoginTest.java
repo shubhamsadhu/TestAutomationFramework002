@@ -14,6 +14,7 @@ public class LoginTest {
 		WebDriver wd = new ChromeDriver();
 		HomePage homePage = new HomePage(wd);
 		LoginPage loginPage = new LoginPage(wd);
+		loginPage.gotoWebsite();
 		
 		
 		
