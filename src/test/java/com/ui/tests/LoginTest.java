@@ -13,6 +13,8 @@ public class LoginTest {
 	public static void main(String[] args) {
 		WebDriver wd = new ChromeDriver();
 		HomePage homePage = new HomePage(wd);
+		LoginPage loginPage = new LoginPage(wd);
+		
 		
 		
 
