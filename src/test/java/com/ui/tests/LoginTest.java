@@ -14,7 +14,7 @@ public class LoginTest {
 	public static void main(String[] args) {
 		WebDriver wd = new ChromeDriver();
 		LoginPage loginPage = new LoginPage(wd);
-		loginPage.gotoWebsite();
+		loginPage.LoginMethod().clickOnWorkModule();  // because loginMethod() return the object of homepage 
 		
 		
 		

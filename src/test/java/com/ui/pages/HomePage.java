@@ -7,8 +7,12 @@ import com.utility.BrowserUtility;
 public final class HomePage extends BrowserUtility {
 
 	public HomePage(WebDriver driver) {
-		super(driver);  // to call a parent class constructor from the child contructor		
-		goToWebsite("");
+		super(driver);  // to call a parent class constructor from the child contructor			
+	}
+	
+	public void clickOnWorkModule() {
+		System.out.println("Open work module successfully");
+
 	}
 
 }

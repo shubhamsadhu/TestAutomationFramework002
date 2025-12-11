@@ -1,5 +1,6 @@
 package com.utility;
 
+import java.lang.reflect.Method;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -21,7 +22,7 @@ public abstract class BrowserUtility {
 	}
 	
 	
-	public WebDriver getDriver() {  //getter use in page object classes
+	public WebDriver getDriver() {  //this method is return driver
 		return driver;
 	}
 

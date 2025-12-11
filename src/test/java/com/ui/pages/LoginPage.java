@@ -14,7 +14,7 @@ public final class LoginPage extends BrowserUtility {
 	
 	public LoginPage(WebDriver driver) {
 		super(driver);  // If the parent class have a parameteried constructor then it's child should be have call parent calls constructor using super keyword inside constructor
-		goToWebsite("https://www.eyeontask.com/login");
+		goToWebsite("https://automationexercise.com/");
 	}
 	
 	public HomePage LoginMethod() {
