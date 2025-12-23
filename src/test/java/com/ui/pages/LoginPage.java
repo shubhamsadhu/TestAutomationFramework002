@@ -19,7 +19,7 @@ public final class LoginPage extends BrowserUtility {
 	
 	public HomePage LoginMethod() {
 		clickonElement(LOGINBTN);
-		HomePage homePage = new HomePage(getDriver());
+		HomePage homePage = new HomePage(getDriver()); // we need a webdriver session here that why we use getDriver() method
 		return homePage;
 	}
 

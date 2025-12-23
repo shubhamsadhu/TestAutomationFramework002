@@ -1,11 +1,13 @@
 package com.utility;
 
-import java.lang.reflect.Method;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -17,14 +19,14 @@ public abstract class BrowserUtility {
 
 	private WebDriver driver;
 	
+	public WebDriver getDriver() {  //this method is return driver
+		return driver;
+	}
+	
 	public BrowserUtility(WebDriver driver) {
 		this.driver=driver;  //to initiaze the instance variable driver!
 	}
 	
-	
-	public WebDriver getDriver() {  //this method is return driver
-		return driver;
-	}
 
 	public void setDriver(WebDriver driver) {
 		this.driver = driver;
@@ -34,9 +36,9 @@ public abstract class BrowserUtility {
 		driver.get(url);
 	}
 	
-	public void maxmizeWindow() {
-		driver.manage().window().maximize();
-	}
+//	public void maxmizeWindow() {
+//		driver.manage().window().maximize();
+//	}
 	
 	public void clickonElement(By locator) {
 		WebElement Element = driver.findElement(locator);
@@ -52,5 +54,10 @@ public abstract class BrowserUtility {
 	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	    }
+	 
+	 public void close() {
+		 System.out.println("Browser Closed");
+		 driver.close();
+	 }
 
 }
