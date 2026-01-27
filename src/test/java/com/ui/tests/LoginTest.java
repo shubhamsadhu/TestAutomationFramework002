@@ -1,27 +1,27 @@
 package com.ui.tests;
 
-import java.time.Duration;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-
-
+import static com.ui.constants.Browser.*;  //static import we don't need to write Browser text.
 import com.ui.pages.HomePage;
 import com.ui.pages.LoginPage;
 
 public class LoginTest {
-
+	LoginPage loginPage;
 	
-	public void LoginTestflow() {
-			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--start-maximized");
-			WebDriver driver = new ChromeDriver(options);
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		LoginPage loginPage = new LoginPage(driver);
+	@BeforeMethod(description = "Load the loginPage of website")
+	public void setup() {
+		 loginPage = new LoginPage(CHROME);
+	}
+	
+	@Test(description = "verify login and enter user name and password", groups = {"E2E","Smoke"})
+	public void LoginTestflow() {	
+		
 		HomePage homePage=loginPage.LoginMethod(); //LoginMethod give a homePage reference that why we write this
 		homePage.doSignUp();
 		loginPage.close();
 	}
 
 }
+
